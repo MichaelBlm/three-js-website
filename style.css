@@ -31,12 +31,21 @@ main {
 h1,
 h2,
 h3,
-blockquote {
+blockquote,
+a {
   font-family: elevon, sans-serif;
   font-weight: 700;
   font-style: normal;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: #ff6347;
+}
 canvas {
   position: fixed;
   top: 0;
