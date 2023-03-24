@@ -57,14 +57,14 @@ Array(200).fill().forEach(addStar);
 const spaceTexture = new THREE.TextureLoader().load("space.jpg");
 scene.background = spaceTexture;
 
-const jeffTexture = new THREE.TextureLoader().load("jeff.png");
+const mikeTexture = new THREE.TextureLoader().load("selfie.JPEG");
 
-const jeff = new THREE.Mesh(
+const mike = new THREE.Mesh(
   new THREE.BoxGeometry(3, 3, 3),
-  new THREE.MeshBasicMaterial({ map: jeffTexture })
+  new THREE.MeshBasicMaterial({ map: mikeTexture })
 );
 
-scene.add(jeff);
+scene.add(mike);
 
 // Moon
 const moonTexture = new THREE.TextureLoader().load("moon.jpg");
@@ -82,8 +82,8 @@ scene.add(moon);
 moon.position.setX(-10);
 moon.position.setZ(30);
 
-jeff.position.z = -5;
-jeff.position.x = 2;
+mike.position.z = -5;
+mike.position.x = 2;
 
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
@@ -91,8 +91,8 @@ function moveCamera() {
   moon.rotation.y += 0.075;
   moon.rotation.z += 0.05;
 
-  jeff.rotation.y += 0.01;
-  jeff.rotation.z += 0.01;
+  mike.rotation.y += 0.01;
+  mike.rotation.z += 0.01;
 
   camera.position.z = t * -0.01;
   camera.position.x = t * -0.0002;
