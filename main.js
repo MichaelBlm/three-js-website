@@ -1,5 +1,5 @@
 import "./style.css";
-import * as THREE from "three";
+import * as THREE from "https://cdnjs.cloudflare.com/ajax/libs/three.js/0.150.1/three.min.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import selfieJPG from "./selfie.jpg";
 import moonJPG from "./moon.jpg";
