@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 
-export default defineConfig({
+export default defineConfig{
   // config options
   base: "/three-js-website/",
-});
+};
