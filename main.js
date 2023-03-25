@@ -1,6 +1,10 @@
 import "./style.css";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import selfieJPG from "./selfie.jpg";
+import moonJPG from "./moon.jpg";
+import normalJPG from "./normal.jpg";
+import spaceJPG from "./space.jpg";
 
 const renderer = new THREE.WebGLRenderer({
   canvas: document.querySelector("#bg"),
@@ -54,10 +58,10 @@ function addStar() {
 
 Array(200).fill().forEach(addStar);
 
-const spaceTexture = new THREE.TextureLoader().load("space.jpg");
+const spaceTexture = new THREE.TextureLoader().load(spaceJPG);
 scene.background = spaceTexture;
 
-const mikeTexture = new THREE.TextureLoader().load("selfie.JPEG");
+const mikeTexture = new THREE.TextureLoader().load(selfieJPG);
 
 const mike = new THREE.Mesh(
   new THREE.BoxGeometry(3, 3, 3),
@@ -67,8 +71,8 @@ const mike = new THREE.Mesh(
 scene.add(mike);
 
 // Moon
-const moonTexture = new THREE.TextureLoader().load("moon.jpg");
-const normalTexture = new THREE.TextureLoader().load("normal.jpg");
+const moonTexture = new THREE.TextureLoader().load(moonJPG);
+const normalTexture = new THREE.TextureLoader().load(normalJPG);
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
   new THREE.MeshStandardMaterial({
